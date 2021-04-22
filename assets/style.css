@@ -21,6 +21,14 @@ body {
     border-bottom: 10px solid black;
   }
   
+  .lead {
+    margin-top: 10px;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem
+  }
+
   .description {
     white-space: pre-wrap;
   }

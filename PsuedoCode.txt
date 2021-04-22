@@ -1,0 +1,9 @@
+// get current day
+	//use moment
+//change background depending on time
+	//use if statements for times
+//save to local storage
+	//setItem
+//get from local storage
+	//getItem
+//create key value pairs for local storage
