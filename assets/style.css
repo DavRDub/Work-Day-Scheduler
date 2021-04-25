@@ -20,9 +20,9 @@ body {
     border-radius: 0;
     border-bottom: 10px solid black;
   }
-  /* .lead {
+  .lead {
     margin-top: 10px;
-  } */
+  }
   /* p {
     margin-top: 0;
     margin-bottom: 1rem
@@ -32,8 +32,8 @@ body {
     white-space: pre-wrap;
   }
   
-  .time-block {
-    text-align: center;
+  .time-stamp {
+    text-align: left;
     border-radius: 15px;
   }
   

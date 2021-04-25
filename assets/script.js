@@ -2,22 +2,34 @@
 var currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
 $("#currentDay").text(currentDay);
 
-function timeTracker() {
-    //Obtain current timestamps.
-    var timeNow = moment().hour();
+$(".saveBtn").on("click", function () {
+    //obtains closest values.
+    console.log(this);
+     // applies changes made to description class.
+    var text = $(this).siblings(".description").val();
+     // applies changes made to the time ids.
+    var time = $(this).parent().attr("id");
 
-    // Loops thru all time blocks
-    $(".time-block").each(function () {
+    //set items in local storage.
+    localStorage.setItem(time, text);
+})
+
+function timeStamping() {
+    //Obtains current timestamps.
+    var currentTime = moment().hour();
+
+    // Loops thru all time-stamps
+    $(".time-stamp").each(function () {
         var blockTime = parseInt($(this).attr("id").split("hour")[1]);
-        console.log(blockTime);
+        console.log(blockTime); 
 
-        //Refers to the current time to run statement.
-        if (blockTime < timeNow) {
+        //Refers to the current time to run if statement.
+        if (blockTime < currentTime) {
             $(this).removeClass("future");
             $(this).removeClass("present");
             $(this).addClass("past");
         }
-        else if (blockTime === timeNow) {
+        else if (blockTime === currentTime) {
             $(this).removeClass("past");
             $(this).removeClass("future");
             $(this).addClass("present");
