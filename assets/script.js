@@ -28,8 +28,7 @@ $(document).ready(function () {
         var currentTime = moment().hour();
 
         $(".time-stamp").each(function () {
-            var pauseTime = parseInt($(this).attr("id").split("hour")[1]);
-
+            var pauseTime = parseInt($(this).attr("id").split("hour")[0]);
             if (pauseTime < currentTime){
                 $(this).removeClass(["present" , "future"]).addClass("past");
             } else if (pauseTime === currentTime) {
