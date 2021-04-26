@@ -31,17 +31,11 @@ $(document).ready(function () {
             var pauseTime = parseInt($(this).attr("id").split("hour")[1]);
 
             if (pauseTime < currentTime){
-                $(this).addClass("past");
-                $(this).removeClass("present");
-                $(this).removeClass("future");
+                $(this).removeClass(["present" , "future"]).addClass("past");
             } else if (pauseTime === currentTime) {
-                $(this).removeClass("past");
-                $(this).addClass("present");
-                $(this).removeClass("future");
+                $(this).removeClass(["past" , "future"]).addClass("present");
             } else {
-                $(this).removeClass("past");
-                $(this).removeClass("present");
-                $(this).addClass("future");
+                $(this).removeClass(["past" , "present"]).addClass("future");
             }
         })
     }
